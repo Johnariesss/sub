@@ -14,7 +14,7 @@ class trypo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
      children: [
-      Container( child: SvgPicture.asset('assets/svg/bsit.svg'),),
+      Container( child: SvgPicture.asset('assets/svg/logologo.svg'),),
      ],
     );
   }
