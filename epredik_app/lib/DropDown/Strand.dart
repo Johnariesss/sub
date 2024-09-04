@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class DropdownStrand extends StatefulWidget {
-  const DropdownStrand({Key? key}) : super(key: key);
+  const DropdownStrand({super.key});
 
   @override
   State<DropdownStrand> createState() => _DropdownStrand();

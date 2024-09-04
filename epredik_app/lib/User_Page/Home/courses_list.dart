@@ -1,8 +1,5 @@
-import 'package:epredik_app/User_Page/Home/courses.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nb_utils/nb_utils.dart';
 
 class pup extends StatelessWidget {
   const pup ({super.key});
@@ -38,16 +35,34 @@ class CoursesList extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             children: [
               SvgPicture.asset('assets/svg/bsit.svg'),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
+              SvgPicture.asset('assets/svg/Accountancy.svg'),
+              const SizedBox(width: 10),
+              SvgPicture.asset('assets/svg/architecture.svg'),
+              const SizedBox(width: 10),
               SvgPicture.asset('assets/svg/biology.svg'),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
+              SvgPicture.asset('assets/svg/Business Administration.svg'),
+              const SizedBox(width: 10),
+              SvgPicture.asset('assets/svg/Civil Engineering.svg'),
+              const SizedBox(width: 10),
               SvgPicture.asset('assets/svg/education.svg'),
-              SizedBox(width: 10),
-              SvgPicture.asset('assets/svg/bsit.svg'),
-              SizedBox(width: 10),
-              SvgPicture.asset('assets/svg/bsit.svg'),
-              SizedBox(width: 10),
-              SvgPicture.asset('assets/svg/bsit.svg'),
+              const SizedBox(width: 10),
+              SvgPicture.asset('assets/svg/Electrical Engineering.svg'),
+              const SizedBox(width: 10),
+              SvgPicture.asset('assets/svg/Hospitality Management.svg'),
+              const SizedBox(width: 10),
+              SvgPicture.asset('assets/svg/Nutrition and Dietetics.svg'),
+              const SizedBox(width: 10),
+              SvgPicture.asset('assets/svg/Office Administration.svg'),
+              const SizedBox(width: 10),
+              SvgPicture.asset('assets/svg/Public Administration.svg'),
+              const SizedBox(width: 10),
+              SvgPicture.asset('assets/svg/Computer Engineering.svg'),
+              const SizedBox(width: 10),
+              SvgPicture.asset('assets/svg/agribusiness.svg'),
+              const SizedBox(width: 10),              
+
             
             ],
           ),

@@ -1,4 +1,3 @@
-import 'package:epredik_app/User_Page/Home/courses.dart';
 import 'package:epredik_app/User_Page/Home/courses_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/flutter_svg.dart';

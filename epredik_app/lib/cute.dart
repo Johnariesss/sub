@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nb_utils/nb_utils.dart';
 
 void main() {
-  runApp(trypo());
+  runApp(const trypo());
 }
 
 
