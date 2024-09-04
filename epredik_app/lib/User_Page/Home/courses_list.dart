@@ -39,9 +39,9 @@ class CoursesList extends StatelessWidget {
             children: [
               SvgPicture.asset('assets/svg/bsit.svg'),
               SizedBox(width: 10),
-              SvgPicture.asset('assets/svg/bsit.svg'),
+              SvgPicture.asset('assets/svg/biology.svg'),
               SizedBox(width: 10),
-              SvgPicture.asset('assets/svg/bsit.svg'),
+              SvgPicture.asset('assets/svg/education.svg'),
               SizedBox(width: 10),
               SvgPicture.asset('assets/svg/bsit.svg'),
               SizedBox(width: 10),
