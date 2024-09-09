@@ -21,7 +21,7 @@ class ButtonRegister extends StatelessWidget {
   style: GoogleFonts.inter (
     color: const Color(0xFF17153B),
     fontWeight: FontWeight.bold,
-    fontSize: 15,
+    fontSize: 14,
   ),
 ),
       ),

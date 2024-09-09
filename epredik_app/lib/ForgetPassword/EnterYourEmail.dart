@@ -17,33 +17,44 @@ class PasswordText extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: const Color(0xFF17153B),
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(25.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Just enter the email address you used for your account here at ePredik and we'll send you an email further instructions",
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.inter(
-                    textStyle: const TextStyle(
-                      color: Color(0xffffffff),
-                      fontWeight: FontWeight.w500,
-                      fontSize: 15,
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Color(0xFF17153B), // First color stop
+                Color(0xff2E236C),
+              ],
+            ),
+          ),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Just enter the email address you used for your account here at ePredik and we'll send you an email further instructions",
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.inter(
+                      textStyle: const TextStyle(
+                        color: Color(0xffffffff),
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(height: 30),
-                MyTextField(
-                  hintText: "E-mail",
-                  obscureText: false,
-                  controller: emailControler,
-                ),
-                const SizedBox(height: 10),
-                const ButtonReset(),
-              ],
+                  const SizedBox(height: 30),
+                  MyTextField(
+                    hintText: "E-mail",
+                    obscureText: false,
+                    controller: emailControler,
+                  ),
+                  const SizedBox(height: 10),
+                  const ButtonReset(),
+                ],
+              ),
             ),
           ),
         ),
