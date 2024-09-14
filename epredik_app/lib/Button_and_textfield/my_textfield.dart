@@ -24,18 +24,17 @@ class MyTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     
     return TextField(
-      
       style: GoogleFonts.inter
       (textStyle: const TextStyle
-      (color: Colors.white), fontSize: 14, fontWeight: FontWeight.bold),
+      (color: Colors.white), fontSize: 14, fontWeight: FontWeight.w600),
       controller: controller,
       decoration: InputDecoration(
-        
+        contentPadding: const EdgeInsets.only(left: 18),
         border: OutlineInputBorder(
         borderSide: BorderSide.none,
         borderRadius: BorderRadius.circular(10),
         ),
-        fillColor: const Color(0xFFC8ACD6).withOpacity(0.15),
+        fillColor: const Color(0xFFC8ACD6).withOpacity(0.10),
         hintText: hintText, 
         hintFadeDuration: null, 
         hoverColor: null,
@@ -43,7 +42,7 @@ class MyTextField extends StatelessWidget {
         hintStyle: GoogleFonts.inter(
         textStyle: const TextStyle(
         color: CupertinoColors.white, 
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w600,
         fontSize: 14, 
           ),
         ),

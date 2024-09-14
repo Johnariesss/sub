@@ -26,6 +26,7 @@ class SignUpPage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
+          
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
@@ -128,10 +129,19 @@ class SignUpPage extends StatelessWidget {
                       ),
                     ],
                   ),
+                  
+                  const Text('hi koya', textAlign: TextAlign.end,),
                 ],
+
+                
               ),
             ),
           ),
+
+          
+
+
+
         ),
       ),
     );

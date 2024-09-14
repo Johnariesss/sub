@@ -1,6 +1,7 @@
 import 'package:epredik_app/Button_and_textfield/button_reset.dart';
 import 'package:epredik_app/Button_and_textfield/my_textfield.dart';
 import 'package:epredik_app/ForgetPassword/EnterYourEmail.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nb_utils/nb_utils.dart';
@@ -29,27 +30,13 @@ class NewPassword extends StatelessWidget {
           ),
           child: Column(
             children: [
-              AppBar(
-                backgroundColor: Colors.transparent,
-                leading: IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => PasswordText()),
-                    );
-                  },
-                  icon: const Icon(Icons.arrow_back_ios_new_rounded),
-                  color: white,
-                ),
-                title: Text(
-                  'Back',
-                  style: GoogleFonts.inter(
-                    textStyle: const TextStyle(
-                      color: Color(0xffffffff),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                    ),
-                  ),
+              const CupertinoNavigationBar(
+                border: null,
+                backgroundColor: transparentColor,
+                leading: Icon(CupertinoIcons.back, color: white,),
+                
+                middle: CupertinoTextField(
+                  
                 ),
               ),
               Expanded(

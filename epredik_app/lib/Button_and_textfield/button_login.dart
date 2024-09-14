@@ -17,7 +17,7 @@ class ButtonLogin extends StatelessWidget {
       width: 1000,
       height: 50,
       child: CupertinoButton(
-        color: const Color(0xFFC8ACD6),
+        color: const Color(0xffC8ACD6),
         onPressed: () {
                 Navigator.pushReplacement(
                   context,

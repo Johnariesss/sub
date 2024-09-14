@@ -36,7 +36,6 @@ class _SchoolPageState extends State<SchoolPage> {
       ),
       selectedStyle: const TextStyle(
         color: Colors.white,
-        fontStyle: FontStyle.normal,
         fontSize: 14,
       ),
       hintText: 'School',
@@ -50,7 +49,7 @@ class _SchoolPageState extends State<SchoolPage> {
       ),
       controller: jobRoleCtrl,
       futureRequestDelay: const Duration(seconds: 1),
-      fillColor: const Color(0xFFC8ACD6).withOpacity(0.15),
+      fillColor: const Color(0xFFC8ACD6).withOpacity(0.10),
       listItemStyle: GoogleFonts.inter(
         textStyle: const TextStyle(
           color: Color(0xFF17153B), // Customize the text color inside the dropdown

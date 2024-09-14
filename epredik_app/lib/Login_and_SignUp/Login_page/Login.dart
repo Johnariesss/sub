@@ -36,7 +36,7 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SvgPicture.asset('assets/svg/eplogoo.svg'),
+                  SvgPicture.asset('assets/svg/eplogoo.svg',),
                   const SizedBox(height: 50),
                   MyTextField(
                     hintText: "Student ID",
