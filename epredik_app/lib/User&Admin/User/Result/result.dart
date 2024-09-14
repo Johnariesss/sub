@@ -1,4 +1,4 @@
-import 'package:epredik_app/User_Page/Home/courses_list.dart';
+import 'package:epredik_app/User&Admin/User/Home/courses_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';

@@ -9,7 +9,6 @@ class Courses extends StatelessWidget {
     return ListView(
       children: [
         SizedBox(width: 350, height: 350, child: SvgPicture.asset('assets/svg/bsit.svg'),),
-
       ],
     );
   }

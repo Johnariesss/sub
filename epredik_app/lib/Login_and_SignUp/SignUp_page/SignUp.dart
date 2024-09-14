@@ -25,103 +25,111 @@ class SignUpPage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: const Color(0xFF17153B),
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(25.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset('assets/svg/eplogoo.svg'),
-                const SizedBox(height: 50),
-                MyTextField(
-                  hintText: "Username",
-                  obscureText: false,
-                  controller: usernameControler,
-                ),
-                const SizedBox(height: 10),
-                MyTextField(
-                  hintText: "Email",
-                  obscureText: false,
-                  controller: emailControler,
-                ),
-
-                const SizedBox(height: 10),
-
-                const DropdownStrand(),
-
-                const SizedBox(height: 10),
-                const SchoolPage(),
-                const SizedBox(height: 10),
-                MyTextField(
-                  hintText: "Password",
-                  obscureText: true,
-                  controller: passwordControler,
-                ),
-                const SizedBox(height: 10),
-                MyTextField(
-                  hintText: "Confirm Password",
-                  obscureText: true,
-                  controller: confirmControler,
-                ),
-                const SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                                        GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => PasswordText()),
-                        );
-                      },
-                      child: Text(
-                      'Forgot Password?',
-                      style: GoogleFonts.lato(
-                        textStyle: const TextStyle(
-                          color: Color(0xFFC8ACD6),
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    )
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 10),
-                const ButtonRegister(),
-                const SizedBox(height: 5),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Already have an account? ',
-                      style: GoogleFonts.lato(
-                        textStyle: const TextStyle(
-                          color: Color(0xFFC8ACD6),
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LoginPage()),
-                        );
-                      },
-                      child: const Text(
-                        "Login Here",
-                        style: TextStyle(
-                          color: Color(0xFFC8ACD6),
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Color(0xFF17153B), 
+                Color (0xff2E236C), 
               ],
+            ),
+          ),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SvgPicture.asset('assets/svg/eplogoo.svg'),
+                  const SizedBox(height: 50),
+                  MyTextField(
+                    hintText: "Student ID",
+                    obscureText: false,
+                    controller: usernameControler,
+                  ),
+                  const SizedBox(height: 10),
+                  MyTextField(
+                    hintText: "E-mail",
+                    obscureText: false,
+                    controller: emailControler,
+                  ),
+                  const SizedBox(height: 10),
+                  const DropdownStrand(),
+                  const SizedBox(height: 10),
+                  const SchoolPage(),
+                  const SizedBox(height: 10),
+                  MyTextField(
+                    hintText: "Password",
+                    obscureText: true,
+                    controller: passwordControler,
+                  ),
+                  const SizedBox(height: 10),
+                  MyTextField(
+                    hintText: "Confirm Password",
+                    obscureText: true,
+                    controller: confirmControler,
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PasswordText()),
+                          );
+                        },
+                        child: Text(
+                          'Forgot Password?',
+                          style: GoogleFonts.lato(
+                            textStyle: const TextStyle(
+                              color: Color(0xFFC8ACD6),
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  const ButtonRegister(),
+                  const SizedBox(height: 5),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Already have an account? ',
+                        style: GoogleFonts.lato(
+                          textStyle: const TextStyle(
+                            color: Color(0xFFC8ACD6),
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()),
+                          );
+                        },
+                        child: const Text(
+                          "Login Here",
+                          style: TextStyle(
+                            color: Color(0xFFC8ACD6),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),

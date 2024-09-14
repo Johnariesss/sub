@@ -1,5 +1,5 @@
-import 'package:epredik_app/User_Page/Home/courses_list.dart';
-import 'package:epredik_app/User_Page/Home/org_list.dart';
+import 'package:epredik_app/User&Admin/User/Home/courses_list.dart';
+import 'package:epredik_app/User&Admin/User/Home/org_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -48,8 +48,7 @@ class HomePage extends StatelessWidget {
                           ),
                         ),
           ),
-          const SizedBox(height: 300, width: 200, child: OrgList(),),
-
+          const SizedBox(height: 181, width: 230, child: OrgList(),),
         ],
       ),
     );

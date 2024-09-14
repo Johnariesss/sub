@@ -1,7 +1,8 @@
-import 'package:epredik_app/Login_and_SignUp/LoginAndSignUpPage.dart';
+import 'package:epredik_app/Button_and_textfield/button_login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:nb_utils/nb_utils.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,9 +15,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(
-      ),
-    
+      home: SplashScreen(),
     );
   }
 }
@@ -37,7 +36,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   _navigateToHome() async {
     await Future.delayed(const Duration(seconds: 3), () {});
-    Navigator.pushReplacement(context,
+    Navigator.pushReplacement(
+      context,
       MaterialPageRoute(builder: (context) => const GetStarted()),
     );
   }
@@ -46,15 +46,24 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF17153B),
-      body: Center(
-        
-        child: SvgPicture.asset('assets/svg/eplogoo.svg'),
-
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF17153B),
+              Color.fromRGBO(0x2E, 0x23, 0x6C, 0.8),
+            ],
+          ),
+        ),
+        child: Center(
+          child: SvgPicture.asset('assets/svg/eplogoo.svg'),
+        ),
       ),
     );
   }
 }
-
 
 class GetStarted extends StatelessWidget {
   const GetStarted({super.key});
@@ -62,51 +71,40 @@ class GetStarted extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    backgroundColor: const Color(0xFF17153B),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'ePredik',
-              style: GoogleFonts.lato(
-                textStyle: const TextStyle(
-                  fontSize: 65,
-                  color: Color(0xFFC8ACD6),
-                  fontWeight: FontWeight.w900,
-                  fontStyle: FontStyle.italic,
-                ),
-              ),
-            ),
-            const SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const LoginandSignUp()),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                textStyle: const TextStyle(fontSize: 18),
-                backgroundColor: const Color(0xFFC8ACD6),
-                shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),),
-                minimumSize: const Size(295, 44),
-              ),
-              child: Text(
-                'Get Started',
-                style: GoogleFonts.lato(
-                  textStyle: const TextStyle(
-                    fontSize: 15,
-                    color: Color(0xFF17153B),
-                    fontWeight: FontWeight.w900,
-                    fontStyle: FontStyle.italic,
+      backgroundColor: const Color(0xFF17153B),
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF17153B),
+              Color.fromRGBO(0x2E, 0x23, 0x6C, 0.8),
+            ],
+          ),
+        ),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(18.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'ePredik',
+                  style: GoogleFonts.inter(
+                    textStyle: const TextStyle(
+                      fontSize: 70,
+                      color: white,
+                      fontWeight: FontWeight.w900,
+                      fontStyle: FontStyle.italic,
+                    ),
                   ),
                 ),
-              ),
+                const SizedBox(height: 30),
+                const Button3(),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

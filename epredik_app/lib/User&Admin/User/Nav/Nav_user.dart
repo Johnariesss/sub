@@ -1,9 +1,10 @@
-import 'package:epredik_app/User_Page/Home/Home_page.dart';
-import 'package:epredik_app/User_Page/Settings/Setting_page.dart';
-import 'package:epredik_app/User_Page/SurveyPage/Undecided_Page.dart';
-import 'package:epredik_app/User_Page/Result/result.dart';
+import 'package:epredik_app/User&Admin/User/Home/User_Home.dart';
+import 'package:epredik_app/User&Admin/User/Settings/Setting_page.dart';
+import 'package:epredik_app/User&Admin/User/SurveyPage/Undecided_Page.dart';
+import 'package:epredik_app/User&Admin/User/Result/result.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:nb_utils/nb_utils.dart';
 
@@ -30,22 +31,23 @@ class _NavUserState extends State<NavUser> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(10),
         child: GNav(
-          hoverColor: const Color(0xff23466c).withOpacity(0.05),
+          backgroundColor: const Color(0xfff5f5f7),
+          hoverColor: CupertinoColors.inactiveGray,
           gap: 5,
           tabBorderRadius: 16,
           mainAxisAlignment: MainAxisAlignment.center,
-          color: black,
-          activeColor: black,
+          color: CupertinoColors.darkBackgroundGray,
+          activeColor: CupertinoColors.activeBlue,
           haptic: true, 
-          tabBackgroundColor: const Color(0xff23466c).withOpacity(0.05),
+          tabBackgroundColor:CupertinoColors.lightBackgroundGray,
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-          
-          
+          textStyle: GoogleFonts.inter(color: CupertinoColors.activeBlue, fontWeight: FontWeight.w500),
+
           tabs:const [
-            GButton(icon:CupertinoIcons.home, hoverColor: aliceBlue, text: "Home",),
+            GButton(icon: CupertinoIcons.square_stack_3d_up, hoverColor: aliceBlue, text: "Home",),
             GButton(icon: CupertinoIcons.heart, hoverColor: aliceBlue, text: "ePredik",),
             GButton(icon: CupertinoIcons.arrow_2_squarepath, hoverColor: aliceBlue, text: "Recommend",),
-            GButton(icon: CupertinoIcons.settings_solid, hoverColor: aliceBlue, text: "Settings",),
+            GButton(icon: CupertinoIcons.settings, hoverColor: aliceBlue, text: "Settings",),
             
 
           ],
@@ -62,3 +64,4 @@ class _NavUserState extends State<NavUser> {
     );
   }
 }
+

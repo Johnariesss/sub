@@ -28,29 +28,6 @@ class Darkmode extends StatelessWidget {
             ),
           ),
         ),
-
-        Padding(
-          padding: const EdgeInsets.all(18.0),
-          child: Container(
-            padding: const EdgeInsets.all(10),
-            height: 50,
-            color: white,
-            child: const Center(
-              child: Row(
-                children: [
-                  Text(
-                    "Account setting", textAlign: TextAlign.start,
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                    ),
-                ],
-              ),
-            ),
-          ),
-        ),
-
-
-
-
       ],
     );
   }

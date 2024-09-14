@@ -1,6 +1,6 @@
 import 'package:epredik_app/Login_and_SignUp/LoginAndSignUpPage.dart';
-import 'package:epredik_app/User_Page/Home/Home_page.dart';
-import 'package:epredik_app/User_Page/Nav/nav.dart';
+import 'package:epredik_app/User&Admin/User/Home/User_Home.dart';
+import 'package:epredik_app/User&Admin/User/Nav/Nav_user.dart';
 import 'package:flutter/material.dart';
 
 void main() {

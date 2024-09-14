@@ -1,11 +1,11 @@
 
-import 'package:epredik_app/User_Page/Settings/darkmode.dart';
+import 'package:epredik_app/User&Admin/User/Settings/darkmode.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 
-class SettingPage extends StatelessWidget {
-  const SettingPage({super.key});
+class AdminSetting extends StatelessWidget {
+  const AdminSetting ({super.key});
 
   @override
   Widget build(BuildContext context) {
