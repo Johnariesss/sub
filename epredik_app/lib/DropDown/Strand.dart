@@ -1,69 +1,71 @@
-import 'package:animated_custom_dropdown/custom_dropdown.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:nb_utils/nb_utils.dart';
 
 class DropdownStrand extends StatefulWidget {
-  const DropdownStrand({super.key});
+  final Function(String?) onStrandChanged;
+
+  const DropdownStrand({super.key, required this.onStrandChanged});
 
   @override
-  State<DropdownStrand> createState() => _DropdownStrand();
-
+  State<DropdownStrand> createState() => _DropdownStrandState();
 }
 
-class _DropdownStrand extends State<DropdownStrand> {
-  final jobRoleCtrl = TextEditingController();
+class _DropdownStrandState extends State<DropdownStrand> {
+  String? selectedStrand;
 
-  Future<List<String>> strandmenu(String query) async {
-    List<String> data = [
-      'ABM (Accountancy Business and Management)',
-      'TVL- HE (Home Economics)',
-      'STEM (Science Technology Engineering and Mathematics)',
-      'HUMSS (Humanities and Social Sciences)',
-    ];
-    
-    return await Future.delayed(const Duration(seconds: 1), () {
-      return data.where((e) {
-        return e.toLowerCase().contains(query.toLowerCase());
-      }).toList();
-    });
-  }
-  
+  final List<String> strands = [
+    'ABM (Accountancy Business and Management)',
+    'TVL- HE (Home Economics)',
+    'STEM (Science Technology Engineering and Mathematics)',
+    'HUMSS (Humanities and Social Sciences)',
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return CustomDropdown.searchRequest(
-      borderRadius: BorderRadius.circular(10),
-      futureRequest: strandmenu,
-      fieldSuffixIcon: const Icon(
-        Icons.arrow_drop_down,
-        color: Colors.white,
-        size: 20,
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: const Color(0xFFC8ACD6).withOpacity(0.10),
       ),
-      
-
-      selectedStyle: const TextStyle(
-        color: Colors.white,
-        fontSize: 14,
-      ),
-      hintText: 'Strand', 
-      hintStyle: GoogleFonts.inter(
-        textStyle: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.w600,
-          fontSize: 14,
-          height: 4.20,
-          
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        child: DropdownButton<String>(
+          value: selectedStrand,
+          hint: Text(
+            'Select Strand',
+            style: GoogleFonts.inter(
+              textStyle: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
+              ),
+            ),
+          ),
+          dropdownColor: const Color(0xFF17153B),
+          icon: const Icon(
+            Icons.arrow_drop_down,
+            color: Colors.white,
+          ),
+          style: const TextStyle(color: Colors.white),
+          underline: const SizedBox(),
+          isExpanded: true,
+          onChanged: (String? newValue) {
+            setState(() {
+              selectedStrand = newValue;
+            });
+            widget.onStrandChanged(newValue);
+          },
+          items: strands.map<DropdownMenuItem<String>>((String value) {
+            return DropdownMenuItem<String>(
+              value: value,
+              child: Text(
+                value,
+                style: const TextStyle(color: Colors.white),
+              ),
+            );
+          }).toList(),
         ),
-
       ),
-      controller: jobRoleCtrl,
-      fillColor: const Color(0xFFC8ACD6).withOpacity(0.10), 
-      listItemStyle: GoogleFonts.inter(
-        textStyle: const TextStyle(
-          color: Color(0xFF17153B),
-        ),
-      ),
-      
     );
   }
 }
