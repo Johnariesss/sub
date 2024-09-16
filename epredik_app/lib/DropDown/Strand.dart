@@ -28,11 +28,11 @@ class _DropdownStrandState extends State<DropdownStrand> {
         color: const Color(0xFFC8ACD6).withOpacity(0.10),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: DropdownButton<String>(
           value: selectedStrand,
           hint: Text(
-            'Select Strand',
+            'Strand',
             style: GoogleFonts.inter(
               textStyle: const TextStyle(
                 color: Colors.white,
